@@ -14,6 +14,7 @@ function Cart() {
       try {
         const response = await api.get("/cart/"); // Fetch cart items
         setCartItems(response.data.items);
+        console.log(cartItems);
         calculateTotalPrice(response.data.items); // Calculate total based on fetched items
         setMessage("");
       } catch (error) {

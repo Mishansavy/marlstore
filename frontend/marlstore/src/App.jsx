@@ -8,6 +8,7 @@ import Checkout from "./components/User/Checkout";
 import Login from "./components/User/Login";
 import Signup from "./components/User/Signup";
 import { HeroSection } from "./components/User/HeroSection/HeroSection";
+import { Order } from "./components/Order";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/orders" element={<Order />} />
         </Routes>
       </div>
     </Router>

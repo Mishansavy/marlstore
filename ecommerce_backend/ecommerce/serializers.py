@@ -61,7 +61,7 @@ class SliderSerializer(serializers.ModelSerializer):
 
 
 class CartItemSerializer(serializers.ModelSerializer):
-    product = serializers.StringRelatedField()
+    product = ProductSerializer()
     image = serializers.SerializerMethodField()  # Field for the full image URL
     price = serializers.SerializerMethodField()  # Field for the product price
 
@@ -79,8 +79,7 @@ class CartItemSerializer(serializers.ModelSerializer):
         return str(obj.product.price)
 
 class CartSerializer(serializers.ModelSerializer):
-    items = CartItemSerializer(many=True, read_only=True)
-
+    items = CartItemSerializer(source='cart_items' ,many=True, read_only=True)
     class Meta:
         model = Cart
         fields = ['id', 'user', 'items', 'created_at']

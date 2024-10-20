@@ -55,7 +55,7 @@ function ProductList() {
             />
             <h2 className="text-lg font-semibold mt-4">{product.name}</h2>
             <p className="text-sm text-gray-500 my-2">
-              {formatPrice(product.price)}
+              Rs. {formatPrice(product.price)}
             </p>
             <Link
               to={`/products/${product.id}`}

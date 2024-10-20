@@ -40,7 +40,7 @@ function Header() {
 
           {/* Links */}
           <ul
-            className={`md:flex gap-10 items-center md:static absolute w-full z-10 pb-10 px-2 md:w-auto bg-violet-200 md:bg-transparent left-0 top-14 transition-transform ${
+            className={`md:flex gap-10 items-center md:static pb-10 md:pb-0 absolute w-full z-10 px-2 md:w-auto bg-violet-200 md:bg-transparent left-0 top-14 transition-transform ${
               isMobileMenuOpen ? "block" : "hidden md:block"
             }`}
           >
